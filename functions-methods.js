@@ -19,7 +19,7 @@ console.log(getEmailDomain("n.eeken@novi-education.nl"))
 console.log(getEmailDomain("t.mellink@novi.nl"))
 console.log(getEmailDomain("a.wiersma@outlook.com"))
 
-console.log(getEmailDomain());
+
 
 /* Opdracht  2 */
 // Schrijf een functie genaamd typeOfEmail, die een emailadres verwacht. De functie checkt of het emailadres een novi domein heeft (medewerker), een novi-education domein (student), of extern domein (zoals gmail of outlook)
@@ -60,7 +60,7 @@ function typeOfEmail (email) {
 }
 
 
-console.log(typeOfEmail('t.mellink@novi.nl'));
+console.log(typeOfEmail('novi.nlaapjesk@outlook.com'));
 
 /* Opdracht  3 */
 // Schrijf een functie genaamd checkEmailValidity, die een emailadres verwacht en checkt of het emailadres valide is. De functie returned true of false, afhankelijk van de uitkomst.
