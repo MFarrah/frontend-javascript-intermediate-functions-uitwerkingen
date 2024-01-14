@@ -9,7 +9,15 @@
 // getEmailDomain("t.mellink@novi.nl") geeft novi.nl
 // getEmailDomain("a.wiersma@outlook.com") geeft outlook.com
 
+/*function getEmailDomain(email) {
+    return email.split(`@`)[1];
+}*/
+const getEmailDomain = (email) => email.split(`@`)[1]
 
+
+console.log(getEmailDomain("n.eeken@novi-education.nl"))
+console.log(getEmailDomain("t.mellink@novi.nl"))
+console.log(getEmailDomain("a.wiersma@outlook.com"))
 
 
 /* Opdracht  2 */
@@ -20,7 +28,38 @@
 // typeOfEmail("novi.nlaapjesk@outlook.com") geeft geeft "Extern" <-- deze moet het ook doen!
 // typeOfEmail("a.wiersma@outlook.com") geeft "Extern"
 
+/*function typeOfEmail(email) {
+    if (email.split(`@`)[1] === "novi.nl") {
+        return "Medewerker";
+    } else if (email.split(`@`)[1] === "novi-education.nl") {
+        return "Student";
+    } else if (email.split(`@`)[1] === "outlook.com") {
+        return "Extern";
+    } else {
+        return "onbekend";
+    }
+}*/
+function typeOfEmail (email) {
+    const splitter = email.split('@')[1]
 
+    switch (splitter) {
+        case 'novi-education.nl' :
+            return "Student"
+            break;
+        case 'novi.nl' :
+            return 'Medewerker'
+            break;
+        case 'outlook.com' :
+            return 'Extern'
+            break;
+        default :
+            return 'niet herkenbaar'
+
+    }
+}
+
+
+console.log(typeOfEmail('t.mellink@novi.nl'));
 
 /* Opdracht  3 */
 // Schrijf een functie genaamd checkEmailValidity, die een emailadres verwacht en checkt of het emailadres valide is. De functie returned true of false, afhankelijk van de uitkomst.
@@ -34,3 +73,4 @@
 // checkEmailValidity("n.eekenanovi.nl") geeft false - want geen @
 // checkEmailValidity("n.eeken@novinl.") geeft false - want de punt mag niet als laatst
 // checkEmailValidity("tessmellink@novi,nl") geeft false - want er staat een komma in
+
